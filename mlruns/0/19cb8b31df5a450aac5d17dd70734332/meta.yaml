@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/igor/Working/BioMech/Source/databricks-mlflow-test/mlruns/0/19cb8b31df5a450aac5d17dd70734332/artifacts
+end_time: 1687638462344
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 19cb8b31df5a450aac5d17dd70734332
+run_name: abundant-whale-182
+run_uuid: 19cb8b31df5a450aac5d17dd70734332
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1687638459095
+status: 3
+tags: []
+user_id: igor
