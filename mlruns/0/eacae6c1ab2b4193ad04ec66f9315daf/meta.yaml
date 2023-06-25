@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/igor/Working/BioMech/Source/databricks-mlflow-test/mlruns/0/eacae6c1ab2b4193ad04ec66f9315daf/artifacts
+end_time: 1687638735487
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: eacae6c1ab2b4193ad04ec66f9315daf
+run_name: bold-hawk-546
+run_uuid: eacae6c1ab2b4193ad04ec66f9315daf
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1687638732867
+status: 3
+tags: []
+user_id: igor

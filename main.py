@@ -14,7 +14,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y)
 
 # In this run, neither the experiment_id nor the experiment_name parameter is provided. MLflow automatically creates a notebook experiment and logs runs to it.
 # Access these runs using the Experiment sidebar. Click Experiment at the upper right of this screen. 
-with mlflow.start_run():
+with mlflow.start_run(experiment_id="/Users/igorperic@live.com/test-experiment"):
   n_estimators = 100
   max_depth = 6
   max_features = 3

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/igor/Working/BioMech/Source/databricks-mlflow-test/mlruns/0/c0ca3f3ed2fd4b5487bc655987000456/artifacts
+end_time: 1687638704053
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: c0ca3f3ed2fd4b5487bc655987000456
+run_name: puzzled-dog-603
+run_uuid: c0ca3f3ed2fd4b5487bc655987000456
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1687638701256
+status: 3
+tags: []
+user_id: igor
