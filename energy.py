@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
-from statsmodels.tsa.arima.model import ARIMA
+from statsmodels.tsa.seasonal import STL
 import xgboost as xgb
 from sklearn.metrics import mean_squared_error
 
@@ -29,17 +29,25 @@ target_column = 'ERCOT'
 # Remove commas and convert numeric columns to float
 df[target_column] = df[target_column].replace({',': ''}, regex=True).astype(float)
 
+# Apply seasonal decomposition
+seasonal_period = 3  # Assuming a daily (24-hour) seasonality
+stl = STL(df[target_column], seasonal=seasonal_period, period=350)
+res = stl.fit()
+seasonal_component = res.seasonal
+
 # Split the data into train and test sets
 train_size = int(0.8 * len(df))
 train_data = df[:train_size]
 test_data = df[train_size:]
 
-# Create training set with timestamp and engineered features
+# Create training set with features
 X_train = train_data[['Hour', 'DayOfWeek', 'Month']]
+X_train['Seasonal'] = seasonal_component[:train_size].values
 y_train = train_data[target_column]
 
-# Create test set with timestamp and engineered features
+# Create test set with features
 X_test = test_data[['Hour', 'DayOfWeek', 'Month']]
+X_test['Seasonal'] = seasonal_component[train_size:].values
 y_test = test_data[target_column]
 
 # Fit an XGBoost model
